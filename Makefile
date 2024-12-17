@@ -1,4 +1,4 @@
-V_SRCS := hdl/top.v hdl/sim_top.v hdl/spi.sv hdl/timer.sv hdl/presc.sv
+V_SRCS := hdl/top.v hdl/sim_top.v hdl/spi.sv hdl/timer.sv hdl/presc.sv hdl/headers/seven_segment_defines.vh hdl/bcd_register.sv hdl/ss_display.sv
 SIM_TOP := sim_top
 SIM_SNAPSHOT := sim_snapshot
 
@@ -25,7 +25,7 @@ clean:
 	rm -Rf reports/* > /dev/null
 	rm -Rf *.txt > /dev/null
 	rm -Rf *.bit > /dev/null
-	rm -Rf reports
+	rm -Rf reports/*
 
 synth:
 	vivado -mode batch -script tcl/synth.tcl
