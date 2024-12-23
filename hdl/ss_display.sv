@@ -23,8 +23,8 @@ module ss_display (
      presc #(
         .value(4)
         ) prescaler_inst (
-           .clk_in(clk),
-           .clk_out(display_clk)
+           .clk_in_p(clk),
+           .clk_out_p(display_clk)
         ); 
 
      // ASSIGNS
